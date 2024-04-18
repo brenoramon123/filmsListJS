@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        pre{
+            padding: 29px;
+            background-color: #ccc;
+            border-radius: 10px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <pre id="debug"></pre>
+        <h1>Filmes</h1>
+        <form action="" class="jumbotron">
+            <div class="row">
+                <div class="col-4"><label for="">Titulo</label><input onkeyup="atualizarDados()" type="text" class="form-control" placeholder="titulo" id="titulo"></div>
+                <div class="col-3"><label for="">Link</label><input id="url" onkeyup="atualizarDados()" type="url" class="form-control" placeholder="url"></div>
+                <div class="col-3">
+                    <label for="">Categoria</label>
+                    <select name="" onchange="atualizarDados()" class="form-control" id="categoria">
+                        <option value="categoria 1">Categoria 1</option>
+                        <option value="categoria 2">Categoria 2</option>
+                        <option value="categoria 3">Categoria 3</option>
+                    </select>
+                </div>
+                <div class="col-2">
+                    <label for="">Ano</label>
+                    <input onkeyup="atualizarDados()" id="ano" type="number" class="form-control" id="ano">
+                </div>
+            </div>
+            <br>
+            <a href="javascript:void(0)" class="btn btn-lg btn-block btn-success" onclick="cadastrar()">Cadastrar Filme</a>
+        </form>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Ano</th>
+                    <th scope="col" class="text-right">Ações</th>
+                </tr>
+            </thead>
+            <tbody id="lista-filmes">
+               
+            </tbody>
+        </table>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
